@@ -6,10 +6,6 @@ import CardContent from '@material-ui/core/CardContent'
 
 
 class Controls extends React.Component {
-    constructor(props) {
-        super(props);
-      };
-
     render() {
         return (
             <CardContent>
