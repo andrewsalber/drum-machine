@@ -1,11 +1,8 @@
-import {Grid, withStyles } from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import React from 'react';
 import Keyboard from './components/Keyboard'
 import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
 import Controls from './components/Controls'
-import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 
 class App extends React.Component {
