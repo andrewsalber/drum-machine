@@ -16,18 +16,25 @@ class App extends React.Component {
       message: " "
     };
 
-    this.sliderChange = this.sliderChange.bind(this);
+    //this.sliderChange = this.sliderChange.bind(this);
     this.bankChange = this.bankChange.bind(this);
     this.powerChange = this.powerChange.bind(this);
     this.buttonChangeText = this.buttonChangeText.bind(this);
   };
 
-  sliderChange(event, newValue) {
+  sliderChange = (event, newValue) => {
     this.setState({
       volume: newValue,
       message: "volume: " + this.state.volume
     });
-  };
+  }
+
+  //sliderChange(event, newValue) {
+    //this.setState({
+      //volume: newValue,
+      //message: "volume: " + this.state.volume
+    //});
+  //};
 
   bankChange = (event) => {
     this.setState(prevState => ({

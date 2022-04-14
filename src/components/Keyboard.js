@@ -126,46 +126,15 @@ function Keyboard(props) {
     }
     
     return (
-        <CardContent>
-            <Grid justifyContent="center" alignItems="center" spacing={2} container>
-            
-                <Grid item xs={4}>
-                    <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={sounds[0]}/>
-                </Grid>
-
-                <Grid item xs={4}>
-                    <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={sounds[1]}/>
-                </Grid>
-
-                <Grid item xs={4}>
-                    <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={sounds[2]}/>
-                </Grid>
-
-                <Grid item xs={4}>
-                    <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={sounds[3]}/>
-                </Grid>
-
-                <Grid item xs={4}>
-                    <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={sounds[4]}/>
-                </Grid>
-
-                <Grid item xs={4}>
-                    <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={sounds[5]}/>
-                </Grid>
-
-                <Grid item xs={4}>
-                    <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={sounds[6]}/>
-                </Grid>
-
-                <Grid item xs={4}>
-                    <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={sounds[7]}/>
-                </Grid>
-
-                <Grid item xs={4}>
-                    <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={sounds[8]}/>
-                </Grid>
+      <CardContent>
+        <Grid justifyContent="center" alignItems="center" spacing={2} container>
+          {sounds.map(x => 
+            <Grid item xs={4}>
+              <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={x}/>
             </Grid>
-        </CardContent>
+          )}
+        </Grid>
+      </CardContent>
     );
   }
 
