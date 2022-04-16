@@ -5,18 +5,16 @@ import Slider from '@material-ui/core/Slider';
 import CardContent from '@material-ui/core/CardContent'
 
 
-class Controls extends React.Component {
-    render() {
-        return (
-            <CardContent>
-                <Box display="flex" justifyContent="center" alignItems="center"><Switch checked={this.props.power} onChange={this.props.powerChange}/></Box>
-                <Box border={1} display="flex" justifyContent="center" alignItems="center" height="30px">{this.props.message}</Box>
-                <Slider disabled={!this.props.power} value={this.props.volume} onChange={this.props.sliderChange}/>
-                <Box display="flex" justifyContent="center" alignItems="center"><Switch disabled={!this.props.power} checked={this.props.bankOneOrTwo} onChange={this.props.bankChange}/></Box>
-            </CardContent>
-        );
-    };
-}
+function Controls(props) {
+    return (
+        <CardContent>
+            <Box display="flex" justifyContent="center" alignItems="center"><Switch checked={props.power} onChange={props.powerChange}/></Box>
+            <Box border={1} display="flex" justifyContent="center" alignItems="center" height="30px">{props.message}</Box>
+            <Slider disabled={!props.power} value={props.volume} onChange={props.sliderChange}/>
+            <Box display="flex" justifyContent="center" alignItems="center"><Switch disabled={!props.power} checked={props.bankOneOrTwo} onChange={props.bankChange}/></Box>
+        </CardContent>
+    );
+};
 
 export default Controls;
 

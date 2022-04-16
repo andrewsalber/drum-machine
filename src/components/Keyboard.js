@@ -129,7 +129,7 @@ function Keyboard(props) {
       <CardContent>
         <Grid justifyContent="center" alignItems="center" spacing={2} container>
           {sounds.map(x => 
-            <Grid item xs={4}>
+            <Grid key={x.keyCode} item xs={4}>
               <NoiseButton buttonChangeText={props.buttonChangeText} volume = {props.volume} power={props.power} data={x}/>
             </Grid>
           )}
