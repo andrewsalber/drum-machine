@@ -11,7 +11,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       power: true,
-      volume: 50,
+      volume: 100,
       bank: false,
       message: " "
     };
